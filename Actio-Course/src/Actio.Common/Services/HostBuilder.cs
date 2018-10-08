@@ -1,4 +1,4 @@
-using Actio.Common.ServiceBus;
+using Actio.Common.MessageBus;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Actio.Common.Services
@@ -12,12 +12,19 @@ namespace Actio.Common.Services
         public HostBuilder(IWebHost webHost)
         {
             this._webHost = webHost;
-            this._bus = (IMsgBus)_webHost.Services.GetService(typeof(IMsgBus));
+            
+        }
+
+        public BusBuilder UseQueueImplementation<TQueue>() where TQueue : IMsgBus
+        {
+            this._bus = (IMsgBus)_webHost.Services.GetService(typeof(TQueue));
+
+            return new BusBuilder(_webHost, _bus);
         }
 
         public override ServiceHost Build()
         {
-            throw new System.NotImplementedException();
+            return new ServiceHost(_webHost);
         }
     }
 }
