@@ -31,7 +31,7 @@ namespace Actio.Api
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddScoped<IMsgBus>(typeof(RabbitQueue));
+            //services.AddScoped<IMsgBus>(s => typeof(RabbitQueue));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

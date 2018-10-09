@@ -27,7 +27,10 @@ namespace MessageBus.Rabbit
 
         public Task WithEventHandlerAsync<TEvent>(IEventHandler<TEvent> handler) where TEvent : IEvent
         {
-            throw new NotImplementedException();
+            return _rabbitBus.SubscribeAsync<TEvent>(
+                msg => handler.HandleAsync(msg),
+                ctx => ctx.UseSubscribeConfiguration(cfg => cfg
+                    .FromDeclaredQueue(q => q.WithName(GetQueueName<TEvent>()))));;
         }
 
         private static string GetQueueName<T>()

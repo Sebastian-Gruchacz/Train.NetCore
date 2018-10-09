@@ -18,7 +18,7 @@ namespace Actio.Common.Services
 
         public override ServiceHost Build()
         {
-            throw new System.NotImplementedException();
+            return new ServiceHost(_webHost);
         }
 
         public BusBuilder SubscribeToCommand<TCommand>() where TCommand : ICommand
