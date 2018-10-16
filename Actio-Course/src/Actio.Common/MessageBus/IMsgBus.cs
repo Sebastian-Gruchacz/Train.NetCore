@@ -10,5 +10,7 @@ namespace Actio.Common.MessageBus
         Task WithCommandHandlerAsync<TCommand>(ICommandHandler<TCommand> handler) where TCommand : ICommand;
 
         Task WithEventHandlerAsync<TEvent>(IEventHandler<TEvent> handler) where TEvent : IEvent;
+
+        Task PublishAsync<TMessage>(TMessage msg);
     }
 }

@@ -30,7 +30,12 @@ namespace MessageBus.Rabbit
             return _rabbitBus.SubscribeAsync<TEvent>(
                 msg => handler.HandleAsync(msg),
                 ctx => ctx.UseSubscribeConfiguration(cfg => cfg
-                    .FromDeclaredQueue(q => q.WithName(GetQueueName<TEvent>()))));;
+                    .FromDeclaredQueue(q => q.WithName(GetQueueName<TEvent>()))));
+        }
+
+        public async Task PublishAsync<TMessage>(TMessage msg)
+        {
+            await _rabbitBus.PublishAsync(msg);
         }
 
         private static string GetQueueName<T>()
