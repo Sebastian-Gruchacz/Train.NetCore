@@ -9,9 +9,9 @@ namespace Actio.Api.Controllers
     //[ApiController]
     public class UsersController : Controller
     {
-        private readonly IMsgBus _bus;
+        private readonly ImessageBus _bus;
 
-        public UsersController(IMsgBus bus)
+        public UsersController(ImessageBus bus)
         {
             _bus = bus;
         }

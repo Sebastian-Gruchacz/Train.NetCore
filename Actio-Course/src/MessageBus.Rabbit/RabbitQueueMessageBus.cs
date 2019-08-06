@@ -8,11 +8,11 @@ using RawRabbit;
 
 namespace MessageBus.Rabbit
 {
-    public class RabbitQueue : IMsgBus
+    public class RabbitQueueMessageBus : ImessageBus
     {
         private readonly IBusClient _rabbitBus;
 
-        public RabbitQueue(IBusClient rabbitBus)
+        public RabbitQueueMessageBus(IBusClient rabbitBus)
         {
             _rabbitBus = rabbitBus;
         }

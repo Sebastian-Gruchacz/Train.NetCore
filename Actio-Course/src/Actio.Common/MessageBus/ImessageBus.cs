@@ -5,7 +5,7 @@ using Actio.Common.Events;
 namespace Actio.Common.MessageBus
 {
     //Abstraction for serving queues <- In training course using RabbitMQ, but then I will try re-implement it with our ActiveMQ
-    public interface IMsgBus
+    public interface ImessageBus
     {
         Task WithCommandHandlerAsync<TCommand>(ICommandHandler<TCommand> handler) where TCommand : ICommand;
 

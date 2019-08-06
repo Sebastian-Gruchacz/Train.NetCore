@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Actio.Common\Actio.Common.csproj" />
+    <ProjectReference Include="..\MessageBus.Rabbit\MessageBus.Rabbit.csproj" />
   </ItemGroup>
 
 </Project>

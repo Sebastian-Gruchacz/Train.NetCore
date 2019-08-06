@@ -8,9 +8,9 @@ namespace Actio.Common.Services
     public class BusBuilder : BuilderBase
     {
         private readonly IWebHost _webHost;
-        private readonly IMsgBus _bus;
+        private readonly ImessageBus _bus;
 
-        public BusBuilder(IWebHost webHost, IMsgBus bus)
+        public BusBuilder(IWebHost webHost, ImessageBus bus)
         {
             _webHost = webHost;
             _bus = bus;

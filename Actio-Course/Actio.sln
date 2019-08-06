@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Actio.Services.Identity", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageBus.Rabbit", "src\MessageBus.Rabbit\MessageBus.Rabbit.csproj", "{C6E9382E-A4FB-4C07-8A50-A3CB76239EBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageExtractor", "MessageExtractor\MessageExtractor.csproj", "{8669804F-A16D-4267-B010-8E7C37FB9E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,18 @@ Global
 		{C6E9382E-A4FB-4C07-8A50-A3CB76239EBC}.Release|x64.Build.0 = Release|Any CPU
 		{C6E9382E-A4FB-4C07-8A50-A3CB76239EBC}.Release|x86.ActiveCfg = Release|Any CPU
 		{C6E9382E-A4FB-4C07-8A50-A3CB76239EBC}.Release|x86.Build.0 = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|x64.Build.0 = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Debug|x86.Build.0 = Debug|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|x64.ActiveCfg = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|x64.Build.0 = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|x86.ActiveCfg = Release|Any CPU
+		{8669804F-A16D-4267-B010-8E7C37FB9E21}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

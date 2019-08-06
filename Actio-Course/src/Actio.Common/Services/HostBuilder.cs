@@ -7,7 +7,7 @@ namespace Actio.Common.Services
     {
         private readonly IWebHost _webHost;
 
-        private IMsgBus _bus;
+        private ImessageBus _bus;
 
         public HostBuilder(IWebHost webHost)
         {
@@ -15,9 +15,9 @@ namespace Actio.Common.Services
             
         }
 
-        public BusBuilder UseQueueImplementation<TQueue>() where TQueue : IMsgBus
+        public BusBuilder UseQueueImplementation<TMsgBus>() where TMsgBus : ImessageBus
         {
-            this._bus = (IMsgBus)_webHost.Services.GetService(typeof(TQueue));
+            this._bus = (ImessageBus)_webHost.Services.GetService(typeof(TMsgBus));
 
             return new BusBuilder(_webHost, _bus);
         }
